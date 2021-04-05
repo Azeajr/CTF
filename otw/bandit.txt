@@ -1,0 +1,78 @@
+bandit.labs.overthewire.org
+
+bandit1
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+bandit2     cat ./-
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+bandit3     cat spaces\ in\ this\ filename
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+bandit4     ls -al; cat .hidden
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+bandit5     file ./*; ./-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+bandit6     ls -al ./*/.*|grep 1033;  du -ba grep 1033
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+bandit7     find 2>/dev/null / -exec ls -la {} \; | grep -w "bandit7 bandit6"
+             throws errors to /dev/null              exact match
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+bandit8     cat data.txt | grep millionth
+cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+bandit9		cat data.txt | sort | uniq -u
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+bandit10	xxd -c 64 data.txt | less
+                Parses the data in 64 octets >> each octet is 1 byte or 8 bits
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+bandit11	base64 -d data.txt
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+bandit12    cat data.txt | tr n-za-m a-z | tr N-ZA-M A-Z
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+bandit13    xxd -r data.txt output.bin
+            used file to determine next decompression
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+bandit14    ssh bandit14@localhost -i sshkey.private
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+bandit15    echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc localhost 30000
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+bandit16    openssl s_client -connect localhost:30001
+cluFn7wTiGryunymYOu4RcffSxQluehd
+bandit17    nmap -A localhost -p 31000-32000
+            openssl s_client -connect localhost:31790>/tmp/bandit17.key
+            chmod 600 /tmp/bandit17.key
+            ssh -i /tmp/bandit17.key bandit17@localhost
+bandi18     diff passwords.old passwords.new
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+bandit19    ssh -p 2220 bandit18@bandit.labs.overthewire.org 'cat readme'
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+bandit20    ./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+bandit21	nc localhost -l -p 49152&
+			./suconnect 49152&
+			fg 1
+			GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+bandit22	cat /etc/cron.d/cronjob_bandit23
+			cat /usr/bin/cronjob_bandit23.sh
+			echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+			cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+bandit23	cat /etc/cron.d/cronjob_bandit24
+			cat /usr/bin/cronjob_bandit24.sh
+				cd /var/spool/$myname
+				for i in * .*;
+			nano /var/spool/bandit24/dev.sh
+				#!/bin/bash
+				cat /etc/bandit_pass/bandit24 > /tmp/bandit24pass
+			cat /tmp/bandit24pass
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+bandit24	echo -e UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ' '{0..9}{0..9}{0..9}{0..9}'\n' |netcat localhost 30002
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+bandit25	shrink screen to less than 5 lines
+			ssh -i bandit26.sshkey bandit26@localhost
+			v to enter Vi
+			:Ex to enter /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+bandit26	while still in Vi logged from bandit25; alternatively you could ssh into bandit26 with a small window so that more does not close upon EOF
+			:set shell=/bin/bash
+            :shell
+			./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
